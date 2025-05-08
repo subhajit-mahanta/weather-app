@@ -15,6 +15,7 @@ async function getWeatherData(city) {
 function formatDateTime(timestamp, timezoneOffset) {
     const localMillis = (timestamp + timezoneOffset) * 1000;
     const localDate = new Date(localMillis);
+
     return localDate.toLocaleString(undefined, {
         weekday: 'long',
         hour: '2-digit',
@@ -22,6 +23,7 @@ function formatDateTime(timestamp, timezoneOffset) {
         hour12: true,
     });
 }
+
 
 
 function updateWeatherDisplay(data) {
