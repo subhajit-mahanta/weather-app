@@ -10,12 +10,6 @@ async function getWeatherData(city) {
     }
 }
 
-
-function formatDateTime(timestamp) {
-    const date = new Date(timestamp * 1000);
-    return date.toUTCString();
-}
-
 function updateWeatherDisplay(data) {
     const weatherInfo = document.getElementById('weather-info');
     if (data && data.main) {
@@ -27,13 +21,11 @@ function updateWeatherDisplay(data) {
         const icon = data.weather[0].icon;
         const name = data.name.replace(/_/g, ' ');
         const country = data.sys.country;
-        const gmtTime = formatDateTime(data.dt);
 
         weatherInfo.innerHTML = `
             <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${description}" />
             <p style="font-size: 0.8em; margin-top: -8px;">(${description})</p>
             <p><strong>${name}, ${country}</strong></p>
-            <p><strong>Time (GMT):</strong> ${gmtTime}</p>
             <p><strong>Temperature:</strong> ${tempCelsius}°C</p>
             <p><strong>Feels Like:</strong> ${feelsLike}°C</p>
             <p><strong>Humidity:</strong> ${humidity}%</p>
