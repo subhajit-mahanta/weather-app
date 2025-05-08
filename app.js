@@ -13,14 +13,16 @@ async function getWeatherData(city) {
 }
 
 function formatDateTime(timestamp, timezoneOffset) {
-    const date = new Date((timestamp + timezoneOffset) * 1000);
-    return date.toLocaleString(undefined, {
+    const localMillis = (timestamp + timezoneOffset) * 1000;
+    const localDate = new Date(localMillis);
+    return localDate.toLocaleString(undefined, {
         weekday: 'long',
         hour: '2-digit',
         minute: '2-digit',
         hour12: true,
     });
 }
+
 
 function updateWeatherDisplay(data) {
     const weatherInfo = document.getElementById('weather-info');
