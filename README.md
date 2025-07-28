@@ -1,4 +1,4 @@
-# 🌤️ Weather App (Spring Boot + HTML/CSS/JS)
+# 🌤️ Abohawa (Spring Boot + HTML/CSS/JS)
 
 A sleek, single-page weather application built using **Spring Boot (Java)** for the backend and **Vanilla JS + HTML/CSS** for the frontend. It fetches real-time weather data using the **OpenWeatherMap API** and displays it with a clean, animated UI.
 

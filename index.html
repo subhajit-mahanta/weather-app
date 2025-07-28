@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abohawa</title>
+  <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
-    <main class="container">
-        <h1>Weather App</h1>
-        <section id="weather-info"></section>
-        <form id="weather-form">
-            <input type="text" id="city" placeholder="Enter your city" aria-label="City">
-            <button type="submit">Get Weather</button>
-        </form>
-    </main>
-    <script src="app.js"></script>
+  <main class="weather-container">
+    <h1>🌤 Abohawa</h1>
+    <form id="weather-form">
+      <input type="text" id="city" placeholder="Enter city..." required />
+      <button type="submit">Search</button>
+    </form>
+    <div id="weather-info" class="weather-card hidden"></div>
+  </main>
+  <script src="app.js"></script>
 </body>
 </html>

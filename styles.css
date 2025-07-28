@@ -1,76 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
-    font-family: 'Open Sans', sans-serif;
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #1e3c72, #2a5298);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-
-.container {
-    max-width: 600px;
-    margin: 60px auto;
-    padding: 30px;
-    background-color: rgba(255, 255, 255, 0.05);
-    border-radius: 15px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(12px);
-    text-align: center;
+.weather-container {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  width: 95%;
+  max-width: 480px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  animation: fadeIn 0.7s ease-in-out;
 }
-
 h1 {
-    font-size: 2.8em;
-    margin-bottom: 25px;
-    color: #fdd835;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
+  font-size: 2.4rem;
 }
-
-#weather-info {
-    background-color: rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-
-#weather-info img {
-    width: 80px;
-    height: 80px;
-}
-
-#weather-info p {
-    margin: 6px 0;
-}
-
 #weather-form {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
-
 #city {
-    flex: 1;
-    min-width: 200px;
-    padding: 10px;
-    border-radius: 6px;
-    border: none;
-    font-size: 1em;
-    outline: none;
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
 }
-
 button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    background-color: #03a9f4;
-    color: #fff;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background-color: #03a9f4;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
-
 button:hover {
-    background-color: #0288d1;
+  background-color: #0288d1;
+}
+.weather-card {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: left;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  animation: slideIn 0.5s ease forwards;
+}
+.weather-card img {
+  float: right;
+  width: 80px;
+  height: 80px;
+}
+.hidden {
+  display: none;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
